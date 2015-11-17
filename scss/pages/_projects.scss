@@ -19,3 +19,13 @@
 	@include background-image(linear-gradient(to top right, #121224, #161925));
 	.inner { background-image: url("../img/dark.png"); }
 }
+
+.p-cubes {
+	@include background-image(linear-gradient(to top right, #b3c3fa, #b5e6ea));
+	.inner { background-image: url("../img/cubes.png"); }
+}
+
+.p-squaregif {
+	background-color: black;
+	.inner { background-image: url("../img/square.gif"); }
+}

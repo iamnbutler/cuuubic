@@ -88,15 +88,19 @@ a {
     transition: top 0.3s ease-in-out; }
   @media screen and (max-width: 840px) {
     .unit {
-      width: 100%; } }
-  @media screen and (min-width: 1240px) {
+      width: 100%;
+      height: 300px; } }
+  @media screen and (min-width: 1140px) {
     .unit {
       width: 33.333%; } }
+  @media screen and (min-width: 1540px) {
+    .unit {
+      width: 25%; } }
   .unit .inner {
     top: 0;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 104%;
     background-position: center;
     background-size: cover;
     float: left;
@@ -115,7 +119,14 @@ a {
     background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(0, 0, 0, 0)));
     background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
     background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
-    background-image: linear-gradient(to top center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); }
+    background-image: linear-gradient(to top center, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    z-index: 4; }
+
+.text:hover .content {
+  top: -4px;
+  transition: top 0.4s ease-in-out; }
+.text .content {
+  transition: top 0.4s ease-in-out; }
 
 .p-lightcube {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuMCIgeDI9IjAuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I1ZTZlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JlZjZjZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -157,6 +168,21 @@ a {
   .p-dark .inner {
     background-image: url("../img/dark.png"); }
 
+.p-cubes {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2IzYzNmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2I1ZTZlYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #b3c3fa), color-stop(100%, #b5e6ea));
+  background-image: -moz-linear-gradient(bottom, #b3c3fa, #b5e6ea);
+  background-image: -webkit-linear-gradient(bottom, #b3c3fa, #b5e6ea);
+  background-image: linear-gradient(to top right, #b3c3fa, #b5e6ea); }
+  .p-cubes .inner {
+    background-image: url("../img/cubes.png"); }
+
+.p-squaregif {
+  background-color: black; }
+  .p-squaregif .inner {
+    background-image: url("../img/square.gif"); }
+
 .header {
   height: 54px;
   background-color: white; }
@@ -184,71 +210,38 @@ a {
   .masthead .inner {
     position: relative;
     margin: 0 auto; }
-  .masthead-feature-1 {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuMCIgeDI9IjAuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I1ZTZlYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JlZjZjZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #b5e6ea), color-stop(100%, #bef6cf));
-    background-image: -moz-linear-gradient(top, #b5e6ea, #bef6cf);
-    background-image: -webkit-linear-gradient(top, #b5e6ea, #bef6cf);
-    background-image: linear-gradient(to bottom left, #b5e6ea, #bef6cf);
-    float: left; }
-    .masthead-feature-1 .element {
-      top: 30px;
-      transition: top 0.3s ease-in-out;
-      left: 40px;
-      width: 50%;
-      height: 100%;
-      background-image: url("../img/cube.png");
-      background-size: 100%;
-      background-repeat: no-repeat;
-      cursor: pointer; }
-      .masthead-feature-1 .element:hover {
-        top: 26px;
-        transition: top 0.3s ease-in-out; }
-    .masthead-feature-1 .content {
+  .masthead .text {
+    position: relative; }
+    .masthead .text .content {
+      position: relative;
+      padding: 48px; }
+    .masthead .text h1 {
+      font-size: 1.9em;
+      line-height: 1.257;
+      color: #555;
+      margin-bottom: 18px;
+      width: 80%; }
+    .masthead .text p {
+      font-size: 1.2em;
+      line-height: 1.557;
+      width: 92%; }
+    .masthead .text .read {
       position: absolute;
-      width: 320px;
-      top: 100px;
-      left: 500px; }
-      .masthead-feature-1 .content > h1 {
-        font-size: 1.9em;
-        line-height: 1.257;
-        color: white;
-        margin-bottom: 12px; }
-      .masthead-feature-1 .content > a {
-        border: 3px solid white;
-        padding: 10px 16px;
-        display: inline-block;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: white;
-        font-size: 1.1em; }
-  .masthead-feature-2 .content {
-    padding: 48px; }
-  .masthead-feature-2 h1 {
-    font-size: 1.9em;
-    line-height: 1.257;
-    color: #555;
-    margin-bottom: 18px;
-    width: 60%; }
-  .masthead-feature-2 p {
-    font-size: 1.2em;
-    line-height: 1.557;
-    width: 80%; }
-  .masthead-feature-2 a {
-    margin-top: 32px;
-    border: 3px solid #333;
-    padding: 10px 16px;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #333;
-    font-size: 1.1em;
-    transition: background-color 0.3s; }
-    .masthead-feature-2 a:hover {
-      background-color: #333;
-      color: white;
+      top: 12px;
+      right: 12px;
+      z-index: 5;
+      border: 3px solid #333;
+      padding: 10px 16px;
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #333;
+      font-size: 1.1em;
       transition: background-color 0.3s; }
+      .masthead .text .read:hover {
+        background-color: #333;
+        color: white;
+        transition: background-color 0.3s; }
 
 .overlay {
   display: none;

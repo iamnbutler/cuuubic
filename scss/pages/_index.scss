@@ -39,53 +39,11 @@
 		margin: 0 auto;
 	}
 
-	&-feature-1 {
-		@include background-image(linear-gradient(to bottom left, #b5e6ea, #bef6cf));
-		float: left;
-	
-		.element {
-			top: 30px;
-			transition: top 0.3s ease-in-out;
-			left: 40px;
-			width: 50%;
-			height: 100%;
-			background-image: url("../img/cube.png");
-			background-size: 100%;
-			background-repeat: no-repeat;
-			cursor: pointer;
-			&:hover {
-				top: 26px;
-				transition: top 0.3s ease-in-out;
-			}
-		}
-		.content {
-			position: absolute;
-			width: 320px;
-			top: 100px;
-			left: 500px;
-
-			> h1 {
-				font-size: 1.9em;
-				line-height: 1.257;
-				color: white;
-				margin-bottom: 12px;
-			}
-
-			> a {
-				border: 3px solid white;
-				padding: 10px 16px;
-				display: inline-block;
-				text-transform: uppercase;
-				font-weight: bold;
-				color: white;
-				font-size: 1.1em;
-			}
-		}
-	}
-
-	&-feature-2 {
+	.text {
+		position: relative;
 
 		.content {
+			position: relative;
 			padding: 48px;
 		}
 
@@ -94,17 +52,20 @@
 			line-height: 1.257;
 			color: #555;
 			margin-bottom: 18px;
-			width: 60%;
+			width: 80%;
 		}
 
 		p {
 			font-size: 1.2em;
 			line-height: 1.557;
-			width: 80%;
+			width: 92%;
 		}
 
-		a {
-			margin-top: 32px;
+		.read {
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			z-index: 5;
 			border: 3px solid #333;
 			padding: 10px 16px;
 			display: inline-block;

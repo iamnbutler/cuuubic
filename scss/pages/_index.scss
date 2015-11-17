@@ -1,1 +1,82 @@
+@import "compass";
+
 // Index
+
+.header {
+	height: 54px;
+	background-color: white;
+	@extend .cf;
+	.inner {
+		width: 1024px;
+		margin: 0 auto;
+		> .logo {
+			line-height: 54px;
+			font-weight: bold;
+			font-size: 1.1em;
+			text-transform: uppercase;
+			color: black;
+			float: left;
+		}
+		> nav {
+			float: right;
+			a {
+				line-height: 54px;
+				font-size: 0.9em;
+				color: #999;
+				padding: 0 16px;
+			}
+		}
+	}
+}
+
+.masthead {
+	position: relative;
+	width: 100%;
+	height: 460px;
+	@include background-image(linear-gradient(to bottom left, #b5e6ea, #bef6cf));
+	
+	&-inner {
+		position: relative;
+		width: 1024px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	&-element {
+		position: absolute;
+		top: 30px;
+		transition: top 0.3s ease-in-out;
+		left: 40px;
+		width: 400px;
+		height: 400px;
+		background-image: url("../img/cube.png");
+		background-size: 400px;
+		cursor: pointer;
+		&:hover {
+			top: 26px;
+			transition: top 0.3s ease-in-out;
+		}
+	}
+	&-content {
+		position: absolute;
+		width: 360px;
+		top: 100px;
+		left: 500px;
+
+		> h1 {
+			font-size: 2.2em;
+			line-height: 1.257;
+			color: white;
+			margin-bottom: 12px;
+		}
+
+		> a {
+			border: 3px solid white;
+			padding: 10px 16px;
+			display: inline-block;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: white;
+			font-size: 1.1em;
+		}
+	}
+}

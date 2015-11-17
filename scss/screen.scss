@@ -3,10 +3,15 @@
 @import "partials/_reset.scss";
 @import "partials/_defaults.scss";
 
+@import "modules/_variables.scss";
+
 // Typography
 
 @import "partials/_typography.scss";
 
+@import "partials/_units.scss";
+
 // Pages
 
+@import "pages/_projects.scss";
 @import "pages/_index.scss";

@@ -1,0 +1,20 @@
+.unit {
+	width: 50%;
+	height: 400px;
+	background-color: #f5f5f5;
+	float: left;
+	overflow: hidden;
+
+	@media screen and (max-width: $break-small) {
+		width: 100%;
+	}
+
+	@media screen and (min-width: $break-large) {
+		width: 33.333%;
+	}
+
+	&.project {
+
+	}
+
+}

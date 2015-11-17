@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".open-overlay").click(function(){return $(".overlay").toggle(),!1}),$("#close-overlay").click(function(){return $(".overlay").toggle(),!1})});

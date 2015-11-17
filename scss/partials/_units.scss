@@ -36,9 +36,9 @@
 		background-size: cover;
 		float: left;
 		transition: top 0.3s ease-in-out;
-		@media screen and (max-width: $break-small) {
-			width: 50%;
-		}
+		// @media screen and (max-width: $break-small) {
+		// 	width: 50%;
+		// }
 	}
 
 	.grad {
@@ -53,12 +53,12 @@
 
 }
 
-.text {
-	&:hover .content {
-		top: -4px;
-		transition: top 0.4s ease-in-out;
-	}
-	.content {
-		transition: top 0.4s ease-in-out;
-	}
-}
+// .text {
+// 	&:hover .content {
+// 		top: -4px;
+// 		transition: top 0.4s ease-in-out;
+// 	}
+// 	.content {
+// 		transition: top 0.4s ease-in-out;
+// 	}
+// }

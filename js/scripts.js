@@ -30,6 +30,11 @@ function scrollAnimation(){
 			$(".start1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
 			$(".start2").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
 			$(".start3").css({'transform': "translateY(-" + (scrolled * 1.8) + "px)"});
+
+			//block2
+			$(".block2-1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
+			$(".block2-2").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
+			$(".block2-3").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"});
 	    console.log(scrolled);
 	    }
 	}

@@ -1,137 +1,113 @@
-@import "compass";
-
 // Index
 
-.header {
-	height: 54px;
-	background-color: white;
-	@extend .cf;
-	.inner {
-		width: 100%;
-		padding: 0 32px;
-		> .logo {
-			line-height: 54px;
-			font-weight: bold;
-			font-size: 1.1em;
-			text-transform: uppercase;
-			color: black;
-			float: left;
-		}
-		> nav {
-			float: right;
-			a {
-				line-height: 54px;
-				font-size: 0.9em;
-				color: #999;
-				padding: 0 16px;
-			}
-		}
-	}
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
-.masthead {
-	position: relative;
-	width: 100%;
-	@extend .cf;
-	
-	.inner {
-		position: relative;
-		margin: 0 auto;
-	}
+nav {
+  position: fixed;
 
-	.text {
-		position: relative;
+  display: flex;
 
-		.content {
-			position: relative;
-			padding: 48px;
-		}
+  width: 100%;
+  height: 80px;
 
-		h1 {
-			font-size: 1.9em;
-			line-height: 1.257;
-			color: #555;
-			margin-bottom: 18px;
-			width: 80%;
-		}
+  background-color: #ffffff;
+  h2 {
+    line-height: 80px;
+    letter-spacing: 0.08em;
+    font-weight: bold;
 
-		p {
-			font-size: 1.2em;
-			line-height: 1.557;
-			width: 92%;
-		}
+    display: block;
 
-		.read {
-			position: absolute;
-			top: 12px;
-			right: 12px;
-			z-index: 5;
-			border: 3px solid #333;
-			padding: 10px 16px;
-			display: inline-block;
-			text-transform: uppercase;
-			font-weight: bold;
-			color: #333;
-			font-size: 1.1em;
-			transition: background-color 0.3s;
-			&:hover {
-				background-color: #333;
-				color: white;
-				transition: background-color 0.3s;
-			}
-		}
-	}
+    height: 80px;
+    margin: auto;
+
+    flex: 1;
+  }
+  a.headline {
+  	width: 180px;
+  	padding: 0 24px;
+  }
+  a.chapter {
+    display: block;
+
+    height: 80px;
+    margin: auto;
+    padding: 16px 24px;
+
+    border-left: 1px solid #efefef;
+    transition: all 0.3s;
+
+    flex: 2;
+    &:hover {
+			background-color: #f7f7f7;
+			transition: all 0.3s;
+    }
+    h3 {
+      font-size: 1em;
+      font-weight: bold;
+
+      margin-bottom: 8px;
+
+      text-transform: uppercase;
+    }
+    p {
+      font-size: .85em;
+			font-style: italic;
+      color: #bbb;
+    }
+  }
 }
 
-.overlay {
-	display: none;
-	top: 54px;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: 99;
-	background-color: rgba(248,248,248,0.96);
+section {
+  width: 100%;
+  height: 1500px;
+  h1 {
+    font-size: 2.6em;
+    font-weight: bold;
 
-	.close {
-		position: fixed;
-		top: 56px;
-		right: 26px;
-		width: 60px;
-		height: 60px;
-		line-height: 60px;
-		text-align: center;
-		font-size: 38px;
-		color: #999;
-	}
+    display: block;
 
-	.about {
-		position: relative;
-		left: -300px;
-		width: 600px;
-		margin-left: 50%;
-		position: 0 auto;
-		@media screen and (max-width: $break-small) {
-			position: static;
-			margin: 0;
-			width: 100%;
-			padding: 24px;
-		}
+    width: 100%;
 
-		h2 {
-			line-height: 54.08px;
-			font-size: 42px;
-			font-style: normal;
-			font-weight: bold;
-			margin-top: 63px;
-		}
+    text-align: center;
 
-		p {
-			margin-top: 28px;
-			font-size: 21px;
-			letter-spacing: -0.063px;
-			line-height: 33.18px;
-			word-wrap: break-word;
-		}
-	}
+    color: white;
+  }
+}
+
+section.start {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#36b5ec+0,8cebb5+67,cbc999+100 */
+  background: #36b5ec; /* Old browsers */
+  background: -moz-linear-gradient(-35deg,  #36b5ec 0%, #8cebb5 67%, #cbc999 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-35deg,  #36b5ec 0%,#8cebb5 67%,#cbc999 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(155deg,  #36b5ec 0%,#8cebb5 67%,#cbc999 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36b5ec', endColorstr='#cbc999',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  h1 {
+    padding-top: 300px;
+  }
+
+  .start1 {
+  	position: fixed;
+  	width: 600px;
+  	top: 500px;
+  	right: 12%;
+  }
+
+  .start2 {
+  	position: fixed;
+  	width: 400px;
+  	top: 700px;
+  	left: 22%;
+  }
+
+  .start3 {
+  	position: fixed;
+  	width: 400px;
+  	top: 850px;
+  	left: 16%;
+  }
 }

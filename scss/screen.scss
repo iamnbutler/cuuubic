@@ -3,15 +3,11 @@
 @import "partials/_reset.scss";
 @import "partials/_defaults.scss";
 
-@import "modules/_variables.scss";
-
 // Typography
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Yanone+Kaffeesatz:400,700,200);
 @import "partials/_typography.scss";
-
-@import "partials/_units.scss";
 
 // Pages
 
-@import "pages/_projects.scss";
 @import "pages/_index.scss";

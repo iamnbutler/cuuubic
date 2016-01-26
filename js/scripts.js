@@ -12,7 +12,7 @@ var lastPosition   		= -1,
 function scrollAnimation(){
 		//variables
 		var nav 				= $("nav"),
-			start			= $(".start"),
+			start					= $("body"),
 			scrolled 			= start.scrollTop();
 
 		//don't recalculate if not scrolling
@@ -23,14 +23,19 @@ function scrollAnimation(){
 			//update last position when scrolling
 			lastPosition = scrolled;
 
-			//example animation
-			$(".start1").css({'transform': "translateY(" + scrolled + "px)"});
+			//plsscroll
+			$(".plsScroll").css({'transform': "translateY(-" + (scrolled * 0.4) + "px)"});
+
+			//cubes
+			$(".start1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
+			$(".start2").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
+			$(".start3").css({'transform': "translateY(-" + (scrolled * 1.8) + "px)"});
 	    console.log(scrolled);
 	    }
 	}
 
 	// Call the loop to execute scroll events
-	$('body').on('mousewheel', function() {
+	$('html, body').on('mousewheel', function() {
 		scrollAnimation();
 		scrollwheelActive = 1;
 

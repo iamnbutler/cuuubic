@@ -7,6 +7,7 @@ html, body {
 
 nav {
   position: fixed;
+  z-index: 8;
 
   display: flex;
 
@@ -14,21 +15,24 @@ nav {
   height: 80px;
 
   background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
   h2 {
-    line-height: 80px;
-    letter-spacing: 0.08em;
+    font-size: 1.2em;
     font-weight: bold;
+    line-height: 80px;
 
     display: block;
 
     height: 80px;
     margin: auto;
 
+    letter-spacing: .08em;
+
     flex: 1;
   }
   a.headline {
-  	width: 180px;
-  	padding: 0 24px;
+    width: 180px;
+		text-align: center;
   }
   a.chapter {
     display: block;
@@ -37,13 +41,15 @@ nav {
     margin: auto;
     padding: 16px 24px;
 
-    border-left: 1px solid #efefef;
-    transition: all 0.3s;
+    transition: all .3s;
+
+    border-left: 1px solid #e5e5e5;
 
     flex: 2;
     &:hover {
-			background-color: #f7f7f7;
-			transition: all 0.3s;
+      transition: all .3s;
+
+      background-color: #f7f7f7;
     }
     h3 {
       font-size: 1em;
@@ -55,15 +61,16 @@ nav {
     }
     p {
       font-size: .85em;
-			font-style: italic;
-      color: #bbb;
+      font-style: italic;
+
+      color: #bbbbbb;
     }
   }
 }
 
 section {
   width: 100%;
-  height: 1500px;
+  height: 1400px;
   h1 {
     font-size: 2.6em;
     font-weight: bold;
@@ -73,8 +80,6 @@ section {
     width: 100%;
 
     text-align: center;
-
-    color: white;
   }
 }
 
@@ -86,28 +91,107 @@ section.start {
   background: linear-gradient(155deg,  #36b5ec 0%,#8cebb5 67%,#cbc999 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36b5ec', endColorstr='#cbc999',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .plsScroll {
+    font-size: .85em;
+    font-weight: bold;
+
+    position: fixed;
+
+    width: 100%;
+    margin-top: 42px;
+
+    text-align: center;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: white;
+    p {
+      margin-top: 6px;
+
+      animation: blink 4s ease-in-out infinite;
+    }
+  }
   h1 {
     padding-top: 300px;
-  }
 
+    color: white;
+  }
   .start1 {
-  	position: fixed;
-  	width: 600px;
-  	top: 500px;
-  	right: 12%;
-  }
+    position: fixed;
+    z-index: 9;
+    top: 500px;
+    right: 12%;
 
+    width: 600px;
+  }
   .start2 {
-  	position: fixed;
-  	width: 400px;
-  	top: 700px;
-  	left: 22%;
+    position: fixed;
+    z-index: 19;
+    top: 700px;
+    left: 22%;
+
+    width: 400px;
+  }
+  .start3 {
+    position: fixed;
+    z-index: 29;
+    top: 850px;
+    left: 14%;
+
+    width: 500px;
+  }
+  .start4 {
+    position: fixed;
+    z-index: 1;
+    top: 150px;
+    left: -10%;
+
+    width: 1000px;
+
+    opacity: .2;
+  }
+}
+
+section.text {
+  width: 680px;
+  margin: 0 auto;
+  h1 {
+    font-size: 1.8em;
+    line-height: 1.4em;
+
+    margin-top: 80px;
+    margin-bottom: 28px;
+
+    text-align: left;
+  }
+  p {
+  	position: relative;
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.58;
+
+    margin-bottom: 22px;
+
+    letter-spacing: .01rem;
+    letter-spacing: -.003em;
+    z-index: 5;
+  }
+}
+
+// Animation
+
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
 
-  .start3 {
-  	position: fixed;
-  	width: 400px;
-  	top: 850px;
-  	left: 16%;
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

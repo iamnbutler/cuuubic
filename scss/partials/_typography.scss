@@ -1,9 +1,5 @@
 // Typography
 
-html {
-  font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
 // Font smoothing hack
 html, html a {
     -webkit-font-smoothing: antialiased !important;
@@ -14,4 +10,12 @@ a {
 	text-decoration: none;
 	color: inherit;
 	&:visited { color: inherit }
+}
+
+h1,h2,h3,h4 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+p,a,li,code,i {
+	font-family: 'Lato', sans-serif;
 }

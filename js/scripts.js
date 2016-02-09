@@ -31,6 +31,14 @@ function scrollAnimation(){
 			$(".start2").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
 			$(".start3").css({'transform': "translateY(-" + (scrolled * 1.8) + "px)"});
 
+			// Chapter 1 - Impostor
+			$(".imp1").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
+			$(".imp2").css({'transform': "translateY(-" + (scrolled * 0.8) + "px)"});
+			$(".imp3").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
+			$(".imp4").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"}, {'transform': "translateX(-" + (scrolled * 0.2) + "px)"});
+			$(".imp5").css({'transform': "translateY(-" + (scrolled * 1.4) + "px)"});
+			$(".imp6").css({'transform': "translateY(-" + (scrolled * 0.9) + "px)"});
+
 			//block2
 			$(".block2-1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
 			$(".block2-2").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});

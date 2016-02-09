@@ -14,8 +14,8 @@ nav {
   width: 100%;
   height: 81px;
 
+  border-bottom: 1px solid rgba(240,240,240,.8);
   background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
   h2 {
     font-size: 1.2em;
     font-weight: bold;
@@ -30,38 +30,76 @@ nav {
 
     flex: 1;
   }
-  a.headline {
-    width: 180px;
-		text-align: center;
+  .logo {
+    display: block;
+
+    width: 88px;
+    height: 80px;
+    padding: 20px 24px;
+
+    transition: all .3s;
+
+    background-image: url(/img/cuLogo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60px;
+    &:hover {
+      transition: all .3s;
+
+      background-color: rgba(240,240,240,.5);
+    }
+  }
+  .grid {
+    $img-width: 26px;
+    $padding-top: (80 - $img-width)/2;
+    $padding-left: 24px;
+
+    width: ($img-width + (2 * $padding-left));
+    padding: $padding-top $padding-left;
+
+    transition: all .3s;
+
+    border-left: 1px solid rgba(240,240,240,.8);
+    img {
+      width: $img-width;
+    }
+    &:hover {
+      transition: all .3s;
+
+      background-color: rgba(240,240,240,.5);
+    }
   }
   a.chapter {
     display: block;
 
     height: 80px;
     margin: auto;
-    padding: 16px 24px;
+    padding: 18px 24px;
 
     transition: all .3s;
 
-    border-left: 1px solid #e5e5e5;
+    border-left: 1px solid rgba(240,240,240,.8);
 
     flex: 2;
     &:hover {
       transition: all .3s;
 
-      background-color: #f7f7f7;
+      background-color: rgba(240,240,240,.5);
     }
     h3 {
       font-size: 1em;
       font-weight: bold;
 
-      margin-bottom: 8px;
+      margin-bottom: 6px;
 
       text-transform: uppercase;
     }
     p {
-      font-size: .85em;
+      font-size: .8em;
       font-style: italic;
+      line-height: 1.1em;
+
+      max-width: 75%;
 
       color: #bbbbbb;
     }
@@ -83,15 +121,15 @@ section {
 }
 
 section.start {
+  height: 1200px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#36b5ec+0,8cebb5+67,cbc999+100 */
+
   background: #36b5ec; /* Old browsers */
   background: -moz-linear-gradient(-35deg,  #36b5ec 0%, #8cebb5 67%, #cbc999 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-35deg,  #36b5ec 0%,#8cebb5 67%,#cbc999 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(155deg,  #36b5ec 0%,#8cebb5 67%,#cbc999 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36b5ec', endColorstr='#cbc999',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-  height: 1400px;
   .plsScroll {
     font-size: .85em;
     font-weight: bold;
@@ -113,14 +151,36 @@ section.start {
     }
   }
   h1 {
-    padding-top: 300px;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+
+    width: 440px;
+    height: 160px;
+    margin-left: -220px;
+    padding: 40px;
+
+    transition: all .4s ease-out;
 
     color: white;
+    border: 5px solid #ffffff;
+    &:hover {
+      top: 120px;
+
+      width: 480px;
+      height: 200px;
+      margin-left: -240px;
+      padding: 60px;
+
+      transition: all .4s ease-in;
+
+      background-color: rgba(255,255,255,.1);
+    }
   }
   .start1 {
     position: fixed;
     z-index: 9;
-    top: 500px;
+    top: 400px;
     right: 12%;
 
     width: 600px;
@@ -128,7 +188,7 @@ section.start {
   .start2 {
     position: fixed;
     z-index: 19;
-    top: 700px;
+    top: 600px;
     left: 22%;
 
     width: 400px;
@@ -136,7 +196,7 @@ section.start {
   .start3 {
     position: fixed;
     z-index: 29;
-    top: 850px;
+    top: 750px;
     left: 14%;
 
     width: 500px;
@@ -144,7 +204,7 @@ section.start {
   .start4 {
     position: fixed;
     z-index: 1;
-    top: 150px;
+    top: 50px;
     left: -10%;
 
     width: 1000px;
@@ -154,35 +214,33 @@ section.start {
 }
 
 .block2 {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d0d3ea+0,c7e7ee+100 */
-background: #d0d3ea; /* Old browsers */
-background: -moz-linear-gradient(-45deg,  #d0d3ea 0%, #c7e7ee 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  #d0d3ea 0%,#c7e7ee 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  #d0d3ea 0%,#c7e7ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0d3ea', endColorstr='#c7e7ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  height: 1000px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d0d3ea+0,c7e7ee+100 */
 
+  background: #d0d3ea; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #d0d3ea 0%, #c7e7ee 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #d0d3ea 0%,#c7e7ee 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #d0d3ea 0%,#c7e7ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
-	height: 1000px;
-	.block2-1 {
-  	position: fixed;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0d3ea', endColorstr='#c7e7ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .block2-1 {
+    position: fixed;
     z-index: 1;
     top: 3470px;
     right: 260px;
 
     width: 250px;
   }
-
   .block2-2 {
-  	position: fixed;
+    position: fixed;
     z-index: 1;
     top: 2700px;
     right: 0;
 
     width: 500px;
   }
-
   .block2-3 {
-  	position: fixed;
+    position: fixed;
     z-index: 1;
     top: 3200px;
     left: 0;
@@ -192,35 +250,69 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0d3ea', end
 }
 
 section.text {
-	position: relative;
+  position: relative;
+  z-index: 2;
+
   width: 680px;
   margin: 0 auto;
-  z-index: 2;
-  h1 {
-    font-size: 1.8em;
-    line-height: 1.4em;
-
-    margin-top: 100px;
-    margin-bottom: 28px;
-
-    text-align: left;
-  }
   p {
-  	position: relative;
     font-family: Georgia,Cambria,"Times New Roman",Times,serif;
     font-size: 21px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.58;
 
+    position: relative;
+    position: relative;
+    z-index: 3;
+    z-index: 5;
+
     margin-bottom: 22px;
 
     letter-spacing: .01rem;
     letter-spacing: -.003em;
-    z-index: 5;
     &:last-child {
-    	padding-bottom: 120px;
+      padding-bottom: 120px;
     }
+  }
+}
+
+article {
+  padding-top: 121px;
+  h1 {
+    font-size: 1.8em;
+    line-height: 1.4em;
+
+    position: relative;
+    z-index: 3;
+
+    margin-bottom: 28px;
+
+    text-align: left;
+  }
+  h2 {
+    font-weight: bold;
+    font-style: .75em;
+    line-height: 2.2em;
+
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+    color: #dadada;
+  }
+  .i {
+    font-style: italic;
+  }
+  .pull {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.2em;
+
+    display: inline-block;
+
+    color: #3e6de9;
+
+    @extend .f-sans-serif;
   }
 }
 
@@ -238,4 +330,41 @@ section.text {
   100% {
     opacity: 1;
   }
+}
+
+// Chapter 1 Figure - Impostor
+
+.imp {
+  position: fixed;
+  z-index: 7;
+  top: 1600px;
+  right: 0;
+
+  width: 512px;
+}
+
+.imp1 {
+  z-index: 9;
+  top: 1400px;
+  right: 50%;
+
+  width: 1024px;
+}
+
+.imp2 {
+  top: 1400px;
+  left: -16%;
+}
+.imp3 {
+  right: -4%;
+}
+
+.imp4 {
+  z-index: 29;
+  top: 1800px;
+  right: 32%;
+}
+
+.imp5 {
+  width: 700px;
 }

@@ -255,30 +255,11 @@ section.text {
 
   width: 680px;
   margin: 0 auto;
-  p {
-    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-    font-size: 21px;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.58;
-
-    position: relative;
-    position: relative;
-    z-index: 3;
-    z-index: 5;
-
-    margin-bottom: 22px;
-
-    letter-spacing: .01rem;
-    letter-spacing: -.003em;
-    &:last-child {
-      padding-bottom: 120px;
-    }
-  }
 }
 
 article {
   padding-top: 121px;
+  padding-bottom: 120px;
   h1 {
     font-size: 1.8em;
     line-height: 1.4em;
@@ -300,19 +281,46 @@ article {
 
     color: #dadada;
   }
+  ul {
+    position: relative;
+    left: 22px;
+  }
+  li {
+    list-style: disc;
+  }
+  p, li {
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.58;
+
+    position: relative;
+    z-index: 3;
+
+    margin-bottom: 22px;
+
+    letter-spacing: .01rem;
+    letter-spacing: -.003em;
+  }
   .i {
     font-style: italic;
   }
+  .b {
+    font-weight: bold;
+  }
   .pull {
-    font-size: 1.6em;
+    padding-left: 20px;
+    font-size: 1.55em;
     font-weight: bold;
     line-height: 1.2em;
+    padding: 8px 0 16px 0;
 
     display: inline-block;
 
-    color: #3e6de9;
+    color: #ff1764;
 
-    @extend .f-sans-serif;
+    // @extend .f-sans-serif;
   }
 }
 
@@ -345,8 +353,8 @@ article {
 
 .imp1 {
   z-index: 9;
-  top: 1400px;
-  right: 50%;
+  top: 1800px;
+  left: 44%;
 
   width: 1024px;
 }
@@ -361,8 +369,8 @@ article {
 
 .imp4 {
   z-index: 29;
-  top: 1800px;
-  right: 32%;
+  top: 2100px;
+  right: 66%;
 }
 
 .imp5 {

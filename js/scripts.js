@@ -23,9 +23,6 @@ function scrollAnimation(){
 			//update last position when scrolling
 			lastPosition = scrolled;
 
-			//plsscroll
-			$(".plsScroll").css({'transform': "translateY(-" + (scrolled * 0.4) + "px)"});
-
 			//cubes
 			$(".start1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
 			$(".start2").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});

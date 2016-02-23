@@ -3,6 +3,8 @@
 
 // $.scrollTo(...) ScrollTo example
 
+$.localScroll();
+
 // ==
 // Parallax Code
 // ==
@@ -40,8 +42,14 @@ function scrollAnimation(){
 			$(".block2-1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
 			$(".block2-2").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
 			$(".block2-3").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"});
-	    console.log(scrolled);
-	    }
+
+	    // Chapter 2
+	    $(".grad-layer-1").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
+	    $("#ch2TopGrad").css({'opacity': (3650 / scrolled) - 0.2});
+	    $("#ch2BotGrad").css({'opacity': (3650 / scrolled) + 0.2});
+	    $(".grad-layer-1").css({'opacity': (3650 / scrolled)});
+	 		console.log(3650 / scrolled);
+	  }
 	}
 
 	// Call the loop to execute scroll events
@@ -66,3 +74,43 @@ function scrollAnimation(){
 			scrollAnimation();
 		}
 	});
+
+// Waypoints
+
+	// Chapter 1
+	var ch1 = new Waypoint({
+	  element: document.getElementById('one'),
+	  handler: function(direction) {
+	  	$('.chapter').removeClass('active');
+	    $('#ch1Trigger').toggleClass('active');
+	  }
+	})
+
+	// Chapter 2
+	var ch2TopGrad = new Waypoint({
+	  element: document.getElementById('two'),
+	  handler: function(direction) {
+	    $('#ch2TopGrad').toggleClass('active');
+	    $('.chapter').removeClass('active');
+	    $('#ch2Trigger').toggleClass('active');
+	    $('#ch2BotGrad').toggleClass('active');
+	  }
+	})
+
+	// Chapter 3
+	var ch3 = new Waypoint({
+	  element: document.getElementById('three'),
+	  handler: function(direction) {
+	  	$('.chapter').removeClass('active');
+	    $('#ch3Trigger').toggleClass('active');
+	  }
+	})
+
+	// Chapter 4
+	var ch4 = new Waypoint({
+	  element: document.getElementById('four'),
+	  handler: function(direction) {
+	  	$('.chapter').removeClass('active');
+	    $('#ch4Trigger').toggleClass('active');
+	  }
+	})

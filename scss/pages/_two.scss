@@ -2,75 +2,23 @@
   position: relative;
   z-index: 29;
 
+  width: 100%;
+  height: 1400px;
 
   background-color: #000000;
-  background-image: url(../img/ze162.png);
+  background-image: url(../img/ch2_bg.jpg);
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100% auto;
-
-  .grad-layer-1 {
-    position: fixed;
-    z-index: 29;
-    top: 800px;
-    left: 0;
-
-    width: 100%;
-    height: 260%;
-    opacity: 0.88;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+25,000000+85&0.28+0,0.42+19,0.65+41,1+60 */
-
-    background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,.28) 0%, rgba(0,0,0,.42) 19%, rgba(0,0,0,.48) 25%, rgba(0,0,0,.65) 41%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 85%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,.28) 0%,rgba(0,0,0,.42) 19%,rgba(0,0,0,.48) 25%,rgba(0,0,0,.65) 41%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 85%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center,  rgba(0,0,0,.28) 0%,rgba(0,0,0,.42) 19%,rgba(0,0,0,.48) 25%,rgba(0,0,0,.65) 41%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  }
-  article {
-    position: relative;
-   	padding-top: 1400px;
-    h1 {
-    	color: white;
-    }
-    p {
-    	color: white;
-    }
-    li {
-    	color: white;
-    }
-    .pull{
-    	color: white;
-    }
-  }
-}
-
-.header-grad {
+  background-position: center center;
+  background-size: auto 100%;
+  .article-wrap {
     position: absolute;
 
-
     width: 100%;
-    height: 600px;
+    padding-top: 1400px;
 
-    opacity: .58;
-    background-image: url(../img/b-grad1.png);
-    background-position: top center;
-    &#ch2TopGrad {
-    	top: 0;
-    	&.active {
-	    	position: fixed;
-	    	top: 20px;
-	    }
-    }
-    &#ch2BotGrad {
-    	&:not(.active) {
-    		top: 200px;
-    	}
-    	transform: rotate(180deg);
-
-    	&.active {
-    		position: fixed;
-    		z-index: 99;
-    		bottom: 0px;
-    	}
-    }
+    background-color: #ffffff;
   }
+  article {
+    // background-color: #fff;
+  }
+}

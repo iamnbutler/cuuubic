@@ -25,10 +25,12 @@ function scrollAnimation(){
 			//update last position when scrolling
 			lastPosition = scrolled;
 
-			//cubes
+			// Chapter 1 Intro
 			$(".start1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
 			$(".start2").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
-			$(".start3").css({'transform': "translateY(-" + (scrolled * 1.8) + "px)"});
+			$(".start3").css({'transform': "translateY(-" + (scrolled * 1.5) + "px)"});
+			$(".ch1_text_title").css({'opacity': (100 / scrolled)});
+			console.log((100/scrolled));
 
 			// Chapter 1 - Impostor
 			$(".imp1").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
@@ -44,7 +46,7 @@ function scrollAnimation(){
 			$(".block2-3").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"});
 
 	    // Chapter 2
-	    $(".ch2-dh").css({'transform': "translateY(" + (scrolled * 0.26) + "px)"});
+	    $(".ch2-dh").css({'transform': "translateY(" + (scrolled * 0.3) + "px)"});
 	  }
 	}
 
@@ -79,6 +81,7 @@ function scrollAnimation(){
 	  handler: function(direction) {
 	  	$('.chapter').removeClass('active');
 	    $('#ch1Trigger').toggleClass('active');
+	    $('.ch2-dh').toggleClass('inactive');
 	  }
 	})
 

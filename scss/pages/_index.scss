@@ -123,6 +123,7 @@ section {
   .ch_text_title {
     width: 495px;
     margin: 0 auto;
+
     outline: 0;
   }
   .project-title {
@@ -130,9 +131,10 @@ section {
     z-index: 15;
     top: 320px;
     left: 50%;
-    outline: 0;
 
     margin-left: -247.5px;
+
+    outline: 0;
   }
 }
 
@@ -150,9 +152,9 @@ section.ch1-intro {
     z-index: 9;
     top: 100px;
     left: 50%;
-    margin-left: -180px;
 
     width: 675px;
+    margin-left: -140px;
     // animation: float 1.8s infinite ease-in-out;
   }
   .start2 {
@@ -160,9 +162,9 @@ section.ch1-intro {
     z-index: 9;
     top: 340px;
     left: 50%;
-    margin-left: -440px;
 
     width: 375px;
+    margin-left: -410px;
     // animation: float 3.3s ease-in-out infinite;
   }
   .start3 {
@@ -170,9 +172,9 @@ section.ch1-intro {
     z-index: 999;
     top: 420px;
     left: 50%;
-    margin-left: -460px;
 
     width: 400px;
+    margin-left: -440px;
     // animation: float 2.4s ease-in-out infinite;
   }
   .start-fix {

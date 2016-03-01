@@ -44,11 +44,7 @@ function scrollAnimation(){
 			$(".block2-3").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"});
 
 	    // Chapter 2
-	    $(".grad-layer-1").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
-	    $("#ch2TopGrad").css({'opacity': (3650 / scrolled) - 0.2});
-	    $("#ch2BotGrad").css({'opacity': (3650 / scrolled) + 0.2});
-	    $(".grad-layer-1").css({'opacity': (3650 / scrolled)});
-	 		console.log(3650 / scrolled);
+	    $(".ch2-dh").css({'transform': "translateY(" + (scrolled * 0.26) + "px)"});
 	  }
 	}
 

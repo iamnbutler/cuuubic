@@ -13,7 +13,7 @@ section.site-intro {
     margin-left: -280px;
     padding: 20px 12px;
 
-    border-top: 4px solid rgba(0,0,0,0.04);
+    border-top: 4px solid rgba(0,0,0,.04);
     h1 {
       font-size: 36px;
       line-height: 1.28;
@@ -32,7 +32,7 @@ section.site-intro {
       text-align: center;
 
       color: #999999;
-      border-bottom: 4px solid rgba(0,0,0,0.04);
+      border-bottom: 4px solid rgba(0,0,0,.04);
     }
   }
   .scroll {
@@ -72,7 +72,6 @@ section.site-intro {
     background-image: url(../img/intro_top.png);
     background-size: 600px;
   }
-
   .bg-img-bot {
     position: fixed;
     z-index: 1;

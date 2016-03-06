@@ -1,0 +1,94 @@
+#one {
+  position: relative;
+  z-index: 39;
+
+  height: 900px;
+
+  background: #36b5ec; /* Old browsers */
+  background: -moz-linear-gradient(-35deg,  #36b5ec 0%, #8cebb5 67%, #cbc999 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-35deg,  #36b5ec 0%,#8cebb5 67%,#cbc999 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(155deg,  #36b5ec 0%,#8cebb5 67%,#cbc999 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36b5ec', endColorstr='#cbc999',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  .start1 {
+    position: fixed;
+    z-index: 9;
+    top: $intro-height + 180px;
+    left: 50%;
+
+    width: 675px;
+    margin-left: -140px;
+    // animation: float 1.8s infinite ease-in-out;
+  }
+  .start2 {
+    position: fixed;
+    z-index: 9;
+    top: $intro-height + 420px;
+    left: 50%;
+
+    width: 375px;
+    margin-left: -410px;
+    // animation: float 3.3s ease-in-out infinite;
+  }
+  .start3 {
+    position: fixed;
+    z-index: 999;
+    top: $intro-height + 500px;
+    left: 50%;
+
+    width: 400px;
+    margin-left: -440px;
+    // animation: float 2.4s ease-in-out infinite;
+  }
+  .start-fix {
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 80px;
+
+    width: 1024px;
+
+    opacity: .8;
+  }
+}
+
+// Chapter 1 Figure - Impostor
+.ch1_title {
+  z-index: 15;
+  top: 360px;
+}
+
+.imp {
+  position: fixed;
+  z-index: 7;
+  top: 1600px;
+  right: 0;
+
+  width: 512px;
+}
+
+.imp1 {
+  z-index: 9;
+  top: 1800px;
+  left: 44%;
+
+  width: 1024px;
+}
+
+.imp2 {
+  top: 1400px;
+  left: -16%;
+}
+.imp3 {
+  right: -4%;
+}
+
+.imp4 {
+  z-index: 29;
+  top: 2100px;
+  right: 66%;
+}
+
+.imp5 {
+  width: 700px;
+}

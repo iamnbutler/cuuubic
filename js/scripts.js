@@ -33,7 +33,7 @@ function scrollAnimation(){
 			$(".start1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
 			$(".start2").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
 			$(".start3").css({'transform': "translateY(-" + (scrolled * 1.5) + "px)"});
-			$(".ch1_text_title").css({'opacity': (100 / scrolled)});
+			// $(".ch1_text_title").css({'opacity': (100 / scrolled)});
 
 			// Chapter 1 - Impostor
 			$(".imp1").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
@@ -44,7 +44,7 @@ function scrollAnimation(){
 	    $(".ch2-grid").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
 	    $(".ch2-block").css({'transform': "translateY(-" + (scrolled * 0.52) + "px)"});
 	    console.log(scrolled)
-			$(".ch2_text_title").css({'opacity': (1/(0.003 * (scrolled - 2950)))});
+			// $(".ch2_text_title").css({'opacity': (1/(0.003 * (scrolled - 2950)))});
 
 			// Chapter 3
 			$(".ch3-block").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});

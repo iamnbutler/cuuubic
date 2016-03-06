@@ -25,33 +25,47 @@ function scrollAnimation(){
 			//update last position when scrolling
 			lastPosition = scrolled;
 
+			// Intro
+			$(".bg-img-top").css({'transform': "translateY(-" + (scrolled * 1.6) + "px)"});
+			$(".bg-img-bot").css({'transform': "translateY(" + (scrolled * 1.1) + "px)"});
+
 			// Chapter 1 Intro
 			$(".start1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
 			$(".start2").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
 			$(".start3").css({'transform': "translateY(-" + (scrolled * 1.5) + "px)"});
 			$(".ch1_text_title").css({'opacity': (100 / scrolled)});
-			console.log((100/scrolled));
 
 			// Chapter 1 - Impostor
 			$(".imp1").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
-			$(".imp2").css({'transform': "translateY(-" + (scrolled * 0.8) + "px)"});
-			$(".imp3").css({'transform': "translateY(-" + (scrolled * 1.1) + "px)"});
 			$(".imp4").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"}, {'transform': "translateX(-" + (scrolled * 0.2) + "px)"});
 			$(".imp5").css({'transform': "translateY(-" + (scrolled * 1.4) + "px)"});
-			$(".imp6").css({'transform': "translateY(-" + (scrolled * 0.9) + "px)"});
-
-			//block2
-			$(".block2-1").css({'transform': "translateY(-" + (scrolled * 1.3) + "px)"});
-			$(".block2-2").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
-			$(".block2-3").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"});
 
 	    // Chapter 2
-	    $(".ch2-dh").css({'transform': "translateY(" + (scrolled * 0.3) + "px)"});
+	    $(".ch2-grid").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
+	    $(".ch2-block").css({'transform': "translateY(-" + (scrolled * 0.52) + "px)"});
+	    console.log(scrolled)
+			$(".ch2_text_title").css({'opacity': (1/(0.003 * (scrolled - 2950)))});
+
+			// Chapter 3
+			$(".ch3-block").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
+
+			// Chapter 4
 	  }
 	}
 
 	// Call the loop to execute scroll events
 	$('html, body').on('mousewheel', function() {
+		scrollAnimation();
+		scrollwheelActive = 1;
+
+		//timer to avoid more scroll functions if mousewheel event is already being used
+		clearTimeout($.data(this, 'timer'));
+		$.data(this, 'timer', setTimeout(function() {
+		    //not using the scrollwheel anymore to scroll
+		    scrollwheelActive = 0;
+		}, 100));
+	})
+	$('html, body').on('click', function() {
 		scrollAnimation();
 		scrollwheelActive = 1;
 
@@ -81,18 +95,26 @@ function scrollAnimation(){
 	  handler: function(direction) {
 	  	$('.chapter').removeClass('active');
 	    $('#ch1Trigger').toggleClass('active');
-	    $('.ch2-dh').toggleClass('inactive');
+	    $('#two').toggleClass('inactive');
+	    $('.ch2_text_title').toggleClass('inactive');
 	  }
 	})
 
-	// Chapter 2
+	// Chapter 2 - Intro
 	var ch2TopGrad = new Waypoint({
 	  element: document.getElementById('two'),
 	  handler: function(direction) {
-	    $('#ch2TopGrad').toggleClass('active');
 	    $('.chapter').removeClass('active');
 	    $('#ch2Trigger').toggleClass('active');
-	    $('#ch2BotGrad').toggleClass('active');
+	  }
+	})
+
+	// Chapter 2 - Text
+	var ch2TopGrad = new Waypoint({
+	  element: document.getElementById('two-text'),
+	  handler: function(direction) {
+	    $('#three').toggleClass('inactive');
+	    $('.ch3_text_title').toggleClass('inactive');
 	  }
 	})
 
@@ -105,11 +127,28 @@ function scrollAnimation(){
 	  }
 	})
 
+	// Chapter 3 - Text
+	var ch3 = new Waypoint({
+	  element: document.getElementById('three-text'),
+	  handler: function(direction) {
+	    $('#four').toggleClass('inactive');
+	    $('.ch4_text_title').toggleClass('inactive');
+	  }
+	})
+
 	// Chapter 4
 	var ch4 = new Waypoint({
 	  element: document.getElementById('four'),
 	  handler: function(direction) {
 	  	$('.chapter').removeClass('active');
 	    $('#ch4Trigger').toggleClass('active');
+	  }
+	})
+
+	// Chapter 4 - Text
+	var ch4 = new Waypoint({
+	  element: document.getElementById('four-text'),
+	  handler: function(direction) {
+	  	// dunno
 	  }
 	})

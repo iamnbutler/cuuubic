@@ -1,0 +1,89 @@
+section.site-intro {
+  position: relative;
+  z-index: 1;
+
+  height: $intro-height;
+  .inner {
+    position: absolute;
+    z-index: 6;
+    top: 380px;
+    left: 50%;
+
+    width: 536px;
+    margin-left: -280px;
+    padding: 20px 12px;
+
+    border-top: 4px solid rgba(0,0,0,0.04);
+    h1 {
+      font-size: 36px;
+      line-height: 1.28;
+
+      margin-bottom: 16px;
+
+      text-align: center;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    h2 {
+      width: 420px;
+      margin: 0 auto;
+      padding-bottom: 28px;
+
+      text-align: center;
+
+      color: #999999;
+      border-bottom: 4px solid rgba(0,0,0,0.04);
+    }
+  }
+  .scroll {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+
+    width: 100%;
+    padding: 34px;
+
+    animation: blink 2.4s ease-in-out infinite;
+    text-align: center;
+
+    color: #777777;
+  }
+  .about {
+    position: absolute;
+    bottom: 0;
+
+    display: none;
+
+    width: 100%;
+    padding: 26px;
+
+    text-align: center;
+  }
+  .bg-img-top {
+    position: fixed;
+    z-index: 2;
+    top: 100px;
+    left: 50%;
+
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+
+    background-image: url(../img/intro_top.png);
+    background-size: 600px;
+  }
+
+  .bg-img-bot {
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 50%;
+
+    width: 600px;
+    height: 600px;
+    margin-left: -300px;
+
+    background-image: url(../img/intro_bottom.png);
+    background-size: 600px;
+  }
+}

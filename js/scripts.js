@@ -42,8 +42,8 @@ function scrollAnimation(){
 
 	    // Chapter 2
 	    $(".ch2-grid").css({'transform': "translateY(-" + (scrolled * 0.26) + "px)"});
-	    $(".ch2-block").css({'transform': "translateY(-" + (scrolled * 0.52) + "px)"});
-	    console.log(scrolled)
+	    $(".ch2-block").css({'transform': "translateY(-" + (scrolled * 0.56) + "px)"});
+	    // console.log(scrolled)
 			// $(".ch2_text_title").css({'opacity': (1/(0.003 * (scrolled - 2950)))});
 
 			// Chapter 3
@@ -89,6 +89,19 @@ function scrollAnimation(){
 
 // Waypoints
 
+	var docStart = new Waypoint({
+	  element: document.getElementById('body'),
+	  handler: function(direction) {
+	  	if (direction === 'down') {
+		    $('nav').addClass('trigger');
+		  }
+		  if (direction === 'up') {
+		    $('nav').removeClass('trigger');
+		  }
+	  },
+	  offset: -800
+	})
+
 	// Chapter 1
 	var ch1 = new Waypoint({
 	  element: document.getElementById('one'),
@@ -115,6 +128,8 @@ function scrollAnimation(){
 	  handler: function(direction) {
 	    $('#three').toggleClass('inactive');
 	    $('.ch3_text_title').toggleClass('inactive');
+	    $('#two').toggleClass('inactive');
+	    $('.ch2_text_title').toggleClass('inactive');
 	  }
 	})
 
@@ -152,3 +167,20 @@ function scrollAnimation(){
 	  	// dunno
 	  }
 	})
+
+// Scroll Direction
+
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+      if ($('nav').is('.trigger')) {
+      	$('nav').addClass('hidden');
+      }
+   } else {
+      if ($('nav').is('.trigger')) {
+      	$('nav').removeClass('hidden');
+      }
+   }
+   lastScrollTop = st;
+});

@@ -1,12 +1,13 @@
 // Chapter 3 - Make
 .ch3_title {
   z-index: 43;
+  top: 360px;
 }
 
 .ch3-block {
   position: fixed;
     z-index: 39;
-    top:1800px;
+    top:1940px;
     left: 50%;
 
     width: 1600px;
@@ -18,7 +19,7 @@
   z-index: 39;
 
   width: 100%;
-  height: 1400px;
+  height: 900px;
 
   background: #FDBBFD; /* Old browsers */
   background: -moz-linear-gradient(-35deg,  #FDBBFD 0%, #D9D6FE 67%, #A1FFFF 100%); /* FF3.6-15 */

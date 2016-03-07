@@ -26,7 +26,7 @@ function scrollAnimation(){
 			lastPosition = scrolled;
 
 			// Intro
-			$(".bg-img-top").css({'transform': "translateY(-" + (scrolled * 1.6) + "px)"});
+			$(".bg-img-top").css({'transform': "translateY(-" + (scrolled * 2.5) + "px)"});
 			$(".bg-img-bot").css({'transform': "translateY(" + (scrolled * 1.1) + "px)"});
 
 			// Chapter 1 Intro
@@ -41,7 +41,7 @@ function scrollAnimation(){
 			$(".imp5").css({'transform': "translateY(-" + (scrolled * 1.4) + "px)"});
 
 	    // Chapter 2
-	    $(".ch2-grid").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
+	    $(".ch2-grid").css({'transform': "translateY(-" + (scrolled * 0.26) + "px)"});
 	    $(".ch2-block").css({'transform': "translateY(-" + (scrolled * 0.52) + "px)"});
 	    console.log(scrolled)
 			// $(".ch2_text_title").css({'opacity': (1/(0.003 * (scrolled - 2950)))});

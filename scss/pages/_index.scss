@@ -221,6 +221,14 @@ article {
 
     @extend .f-sans-serif;
   }
+  .divider {
+    display:block;
+    content:'';
+    width: 60px;
+    border-bottom: 2px solid #1e1e1e;
+    margin: 0 auto;
+    margin-bottom: 36px;
+  }
   .further-reading {
     margin-top: 100px;
   }

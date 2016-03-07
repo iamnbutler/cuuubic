@@ -1,21 +1,24 @@
 // Chapter 2 - Break the Cycle
 .ch2_title {
   z-index: 42;
+  top: 360px;
 }
 
 .ch2-grid {
+  display: none;
   position: fixed;
   z-index: 39;
-  top:780px;
+  top:880px;
   right:0px;
 
   width: 1628px;
 }
 
 .ch2-block {
+  display: none;
   position: fixed;
   z-index: 999;
-  top:1600px;
+  top:1480px;
   right:0px;
 
   width: 1628px;

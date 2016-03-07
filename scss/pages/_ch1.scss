@@ -61,7 +61,7 @@
 .imp {
   position: fixed;
   z-index: 7;
-  top: 1600px;
+  top: $intro-height + 1600px;
   right: 0;
 
   width: 512px;
@@ -69,14 +69,14 @@
 
 .imp1 {
   z-index: 9;
-  top: 1800px;
+  top: $intro-height + 1800px;
   left: 44%;
 
   width: 1024px;
 }
 
 .imp2 {
-  top: 1400px;
+  top: $intro-height + 1400px;
   left: -16%;
 }
 .imp3 {
@@ -85,10 +85,14 @@
 
 .imp4 {
   z-index: 29;
-  top: 2100px;
+  top: $intro-height + 2100px;
   right: 66%;
 }
 
 .imp5 {
   width: 700px;
+}
+
+#one-text {
+  z-index: 49;
 }

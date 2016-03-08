@@ -50,6 +50,9 @@ function scrollAnimation(){
 			$(".ch3-block").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
 
 			// Chapter 4
+			$(".ch4_l1").css({'transform': "translateY(-" + (scrolled * 0.28) + "px)"});
+			$(".ch4_l2").css({'transform': "translateY(-" + (scrolled * 0.35) + "px)"});
+			$(".ch4_l3").css({'transform': "translateY(-" + (scrolled * 0.45) + "px)"});
 	  }
 	}
 

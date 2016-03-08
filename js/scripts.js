@@ -46,6 +46,11 @@ function scrollAnimation(){
 	    // console.log(scrolled)
 			// $(".ch2_text_title").css({'opacity': (1/(0.003 * (scrolled - 2950)))});
 
+			// Chapter 2 - Text
+			$(".ch2_text_l1").css({'transform': "translateY(-" + (scrolled * 1) + "px)"});
+			$(".ch2_text_l2").css({'transform': "translateY(-" + (scrolled * 1.2) + "px)"}, {'transform': "translateX(-" + (scrolled * 0.2) + "px)"});
+			$(".ch2_text_l3").css({'transform': "translateY(-" + (scrolled * 1.4) + "px)"});
+
 			// Chapter 3
 			$(".ch3-block").css({'transform': "translateY(-" + (scrolled * 0.3) + "px)"});
 

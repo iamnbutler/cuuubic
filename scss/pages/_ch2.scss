@@ -1,13 +1,13 @@
 // Chapter 2 - Break the Cycle
 .ch2_title {
-  z-index: 42;
+  z-index: 65;
   top: 360px;
 }
 
 .ch2-grid {
-  display: none;
+  // display: none;
   position: fixed;
-  z-index: 39;
+  z-index: 62;
   top:880px;
   right:0px;
 
@@ -15,10 +15,10 @@
 }
 
 .ch2-block {
-  display: none;
+  // display: none;
   position: fixed;
-  z-index: 999;
-  top:1480px;
+  z-index: 67;
+  top:2240px;
   right:0px;
 
   width: 1628px;
@@ -26,10 +26,10 @@
 
 #two {
   position: relative;
-  z-index: 29;
+  z-index: 59;
 
   width: 100%;
-  height: 1400px;
+  height: 900px;
 
   background: #61E2FA; /* Old browsers */
   background: -moz-linear-gradient(-35deg,  #61E2FA 0%, #9863F7 67%, #F763F3 100%); /* FF3.6-15 */
@@ -57,7 +57,29 @@
 
 #two-text {
   position: relative;
-  z-index: 49;
+  z-index: 69;
 
   background-color: #ffffff;
+}
+
+.ch2_text_l1 {
+  z-index: 91;
+  top: 6400px;
+  left: 48%;
+
+  width: 1024px;
+}
+
+.ch2_text_l2 {
+  z-index: 92;
+  top: 8600px;
+  right: 66%;
+  width: 800px;
+}
+
+.ch2_text_l3 {
+  z-index: 99;
+  top: 7700px;
+  width: 640px;
+  right: 80px;
 }

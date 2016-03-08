@@ -1,6 +1,12 @@
+#one-text {
+  position: relative;
+  z-index: 89;
+  background-color: #fff;
+}
+
 #one {
   position: relative;
-  z-index: 39;
+  z-index: 79;
 
   height: 900px;
 
@@ -12,7 +18,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36b5ec', endColorstr='#cbc999',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   .start1 {
     position: fixed;
-    z-index: 9;
+    z-index: 79;
     top: $intro-height + 180px;
     left: 50%;
 
@@ -22,7 +28,7 @@
   }
   .start2 {
     position: fixed;
-    z-index: 9;
+    z-index: 79;
     top: $intro-height + 420px;
     left: 50%;
 
@@ -40,27 +46,16 @@
     margin-left: -440px;
     // animation: float 2.4s ease-in-out infinite;
   }
-  .start-fix {
-    position: fixed;
-    z-index: 1;
-    top: 100px;
-    left: 80px;
-
-    width: 1024px;
-
-    opacity: .8;
-  }
 }
 
 // Chapter 1 Figure - Impostor
 .ch1_title {
-  z-index: 15;
+  z-index: 80;
   top: 360px;
 }
 
 .imp {
   position: fixed;
-  z-index: 7;
   top: $intro-height + 1600px;
   right: 0;
 
@@ -68,31 +63,20 @@
 }
 
 .imp1 {
-  z-index: 9;
+  z-index: 91;
   top: $intro-height + 1800px;
-  left: 44%;
+  left: 34%;
 
   width: 1024px;
 }
 
-.imp2 {
-  top: $intro-height + 1400px;
-  left: -16%;
-}
-.imp3 {
-  right: -4%;
-}
-
 .imp4 {
-  z-index: 29;
-  top: $intro-height + 2100px;
+  z-index: 92;
+  top: $intro-height + 1400px;
   right: 66%;
 }
 
 .imp5 {
+  z-index: 99;
   width: 700px;
-}
-
-#one-text {
-  z-index: 49;
 }
